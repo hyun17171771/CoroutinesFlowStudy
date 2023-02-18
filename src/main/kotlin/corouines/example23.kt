@@ -3,7 +3,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlin.random.Random
-import kotlin.system.measureNanoTime
 import kotlin.system.measureTimeMillis
 
 suspend fun getRandom1(): Int {

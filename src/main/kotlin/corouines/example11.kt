@@ -1,4 +1,7 @@
-import kotlinx.coroutines.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 
 suspend fun doOneTwoThree2() = coroutineScope { //코루틴 빌더를 호출하기 위해 존재, 코루틴의 부모

@@ -1,4 +1,7 @@
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 //CoroutineScope - 어느 코루틴 스콥에도 속하지 않은 스코프, 간편하게 쓸 수 있지만 어떤 계층에도 속하지 않고 영원히 동작하게 된다는 문제가 있기 때문에 잘 사용하지 않음

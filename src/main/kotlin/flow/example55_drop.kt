@@ -1,6 +1,8 @@
 package flow
 
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.dropWhile
+import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.runBlocking
 
 //drop 연산자는 처음 몇개의 결과를 버린다
