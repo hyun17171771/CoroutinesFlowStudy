@@ -4,7 +4,7 @@ import kotlinx.coroutines.runBlocking
 
 
 suspend fun  doThree() {
-    println("launch1: ${Thread.currentThread().name}")
+    println("launch3: ${Thread.currentThread().name}") //2
     delay(1000L)
     println("3!")
 }
@@ -13,7 +13,7 @@ fun doOne() {
     println("1!")
 }
 suspend fun  doTwo() {
-    println("launch1: ${Thread.currentThread().name}")
+    println("launch2: ${Thread.currentThread().name}") //1
     delay(500L)
     println("2!")
 }

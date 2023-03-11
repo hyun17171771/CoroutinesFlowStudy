@@ -10,7 +10,7 @@ import kotlinx.coroutines.runBlocking
 //반면 try catch 절에서는 catch에서 문제 발생한 것은 알아도 finally에서 예외가 발생했는 지 여부는 알 수 없다
 fun ex77(): Flow<Int> = flow {
     emit(1)
-    throw RuntimeException()
+    //throw RuntimeException()
 }
 
 fun main() = runBlocking {

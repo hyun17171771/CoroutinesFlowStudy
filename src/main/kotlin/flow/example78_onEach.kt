@@ -14,7 +14,7 @@ fun events(): Flow<Int> = (1..3).asFlow().onEach { delay(100) }
 fun main() = runBlocking {
     events()
         .onEach { event -> println("Event: $event") } //onEach는 collect가 실행되기 전엔 실행되지 않음
-        .collect() //스트림이 끝날 때 까지 기다리게  but 이벤트는 계속 발생하므로 이 이벤트가 끝날 때까지 기다리게 됨
+        .collect() //스트림이 끝날 때 까지 기다리게 되고 다음 코드에 기회를 주지 않음 but 이벤트는 계속 발생하므로 이 이벤트가 끝날 때까지 블로킹되고 기다리게 됨 -> 이벤트를 위해서 collect를 사용할 수는 없음
     println("Done")
     //유아이, 네트워크 호출 불가능
 }

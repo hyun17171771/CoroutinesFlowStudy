@@ -5,6 +5,10 @@ import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.runBlocking
 
+/**
+ * take는 값을 몇 개 가져올 지 결정한다
+ * takeWhile은 조건을 만족하는 동안만 값을 가져오게 할 수 있음
+ */
 
 fun main() = runBlocking<Unit> {
 /*    (1..20).asFlow().transform {

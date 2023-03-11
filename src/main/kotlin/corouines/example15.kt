@@ -16,7 +16,7 @@ suspend fun doCount() = coroutineScope {
     }
 
     delay(200L)
-    job1.cancelAndJoin()
+    job1.cancelAndJoin() //join을 하지 않으면 아래 코드가 먼저 출력됨(스레드 블록킹을 하지 않으므로)
     println("doCount Done!")
 }
 

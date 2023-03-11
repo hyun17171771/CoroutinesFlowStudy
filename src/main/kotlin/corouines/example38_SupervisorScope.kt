@@ -1,7 +1,7 @@
 import kotlinx.coroutines.*
 
 //코루틴 스코프 + 슈퍼바이저 잡 = SupervisorScope
-suspend fun supervisoredFunc() = supervisorScope { //supervisorScope는 예외가 발생할 수 있는 곳에 무조건 CEH를 붙여야 한다
+suspend fun supervisoredFunc() = supervisorScope { //supervisorScope는 예외가 발생할 수 있는 곳에 무조건 CEH를 붙여야 한다(그렇지 않으면 예외 전파됨)
     launch { printRandom1() }
     launch(ceh) { printRandom2() }
 }
